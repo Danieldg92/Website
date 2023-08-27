@@ -1,18 +1,15 @@
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+const camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild( renderer.domElement );
 
-//const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-//const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-//const cube = new THREE.Mesh( geometry, material );
 const loader = new GLTFLoader();
 var model;
-loader.load("/Public/GunCourseShadedTrigger-1.glb", 
+loader.load("/Public/Ship.glb", 
 function(gltf){
 
     gltf.animations; 
@@ -20,8 +17,8 @@ function(gltf){
     scene.add(model);
     gltf.cameras;
     gltf.asset;
-    renderer.setClearColor(0xffffff);
-    camera.position.z = 5;
+    renderer.setClearColor(0x000000);
+    camera.position.z = 15;
     
 
     const dirLight = new THREE.DirectionalLight( 0xefefff, 1.5 );
@@ -42,4 +39,3 @@ function(gltf){
     console.error( error );
 
 });
-
