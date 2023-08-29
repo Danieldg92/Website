@@ -129,26 +129,24 @@ p{
     height:6px;
     background: #37474f;
 }
-#boxes{
-    margin-top:50px;
-    padding-bottom: 25px;
-}
+
 
 #boxes .box{
+    margin-top:50px;
     float: left;
     text-align:center;
     width: 30%;
-    margin-right: 50px;
+    margin-right: 40px;
     margin-bottom: 50px;
-
 }
 
 #boxes .box img{
     float: left;
     width: 360px;
     padding-bottom: 20px;
-    border-radius: 15px;
 }
+
+
 
 footer{
     background: #37474f;
