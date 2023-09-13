@@ -108,6 +108,7 @@ header #branding h1{
     background: url('../img/shipIso.png') no-repeat 0 -300px;
     background-size: 100%;
     padding-top: 140px;
+    color:#ffffff;
 }
 
 #showcase2{
@@ -116,9 +117,18 @@ header #branding h1{
     padding-top: 140px;
 }
 
-h1{
-    color:#f4f4f4;
+h1 .indexText{
+    color:#ffffff;
 }
+
+.BlenderProj {
+    color:#ffffff;
+    position:absolute;
+    margin-top:45px;
+    margin-left:520px;
+    font-size: 100px;
+}
+
 
 p{
     color:#f4f4f4;
@@ -135,18 +145,24 @@ p{
     margin-top:50px;
     float: left;
     text-align:center;
-    width: 30%;
-    margin-right: 40px;
-    margin-bottom: 50px;
+    width: 25%;
+    margin-right: 125px;
+
 }
 
 #boxes .box img{
     float: left;
-    width: 360px;
+    width: 440px;
     padding-bottom: 20px;
 }
 
+#boxes .box h3{
+    margin-left:50px;   
+}
 
+#boxes .box p{
+    margin-left:50px;   
+}
 
 footer{
     background: #37474f;
@@ -154,6 +170,47 @@ footer{
     padding-top:5px;
     padding-left: 37%;
     height: 50px;
-    margin-top: 550px;
+    margin-top: 620px;
     text-align:center;
+}
+
+#click {
+    margin-top: 450px;
+    margin-left: 1500px;
+    width: 200px;
+    height:50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    position: absolute;
+}
+
+#Triangles{
+
+    position:absolute;
+}
+#Light{
+    fill:#76C5FF;
+}
+
+#Dark{
+    fill:#37ABFF;
+
+}
+
+#Dark1, #Dark2, #Light1{
+    transition: all 1s ease;
+
+}
+
+#Dark2{
+    transform: translateX(-100%);
+}
+
+svg:hover #Light1{
+    transform:translateX(20%);
+}
+
+svg:hover #Dark1{
+    transform:translateX(20%);
+    opacity: 0%;
 }
