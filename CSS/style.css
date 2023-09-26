@@ -1,5 +1,5 @@
 body{
-    font: 15px/1.5 Arial, helvetica, sans-serif;
+    font: 15px/1.5 montserrat;
     padding:0;
     margin:0;
     background: #b9b9b9;
@@ -7,86 +7,159 @@ body{
 
 }
 
+.vid{
+    animation: vidOpac 2s linear;
+    min-width:100%;
+    min-height:100%;
+    right:0;
+    bottom:0;
+    position: fixed;
+    opacity: 0%;
+    z-index:-1;
+}
+
+@keyframes vidOpac{
+    0%{
+    opacity: 100%;
+    }
+    100%{
+        opacity:0%;
+    }
+}
+
 .container{
-    width: 80%;
-    margin: auto; 
-    align-items: center;
-    justify-content: center;
+    /*border: 5px solid;*/
+    position:absolute;
+    left:25%;
+    top:35%;
+    line-height: 100px;
 }
 
 header{
     background: #b9b9b9;
-    color:#f4f4f4;
+    color:#ffffff;
+    position:relative;
+    height:100px;
     padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #37474f 6px solid;
 }
 
-header #branding{
-    float:left;
+.indexText{
+    animation: slideY 1s linear;
 }
 
-header #branding h1{
-    margin: 0;
-    color:#f4f4f4;
+.containerAbout{
+    /*border: 5px solid;*/
+    color:white;
+    width:500px;
+    margin:auto;
+}
 
+h2{ font: 64px/1.5 montserrat;
+    text-align: center;}
+h3{ font: 48px/1.5 montserrat;
+    text-align: center;}
+h4{ font: 32px/1.5 montserrat;
+    text-align: center;}
+p{  font: 18px/1.5 montserrat;
+    text-align: center;
+
+}
+
+
+.whiteDivider{
+    position:absolute;
+    background-color: white;
+    width: 3px;
+    height:300px;
+    left:49%;
+    top:30%;
+    animation: slideY 1s linear;
+}
+
+@keyframes slideY{
+    0%{
+    transform: translateY(-300%);
+    opacity: 0%;
+    }
+    100%{
+        transform:translateY(0%);
+        opacity:100%;
+    }
+}
+
+@keyframes slideX{
+    0%{
+        transform: translateX(300%);
+        opacity: 0%;
+        }
+        100%{
+            transform:translateX(0%);
+            opacity:100%;
+        }
 }
 
 .navbar {
-    overflow: hidden;
-    float: right;}
+    /*border: 5px solid;*/
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    left:52%;
+    top:31.5%;
+    height:400px;
+    animation: 1s slideX linear; 
+}
 
 .navbar a{
-    float: left;
-    font-size: 16px;
     font-weight: bold;
     color:#f4f4f4;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 32px;
     text-align: center;
-    padding: 14px 16px;
+    height:25px;
+    padding: 24px 16px;
 }
 
 .dropdown{
     float: left;
     overflow: hidden;
+    font-size:32px;
+    
 }
 
-.dropdown .dropbtn {
-    font-size: 16px;
+.dropbtn {
+    font: 15px/1.5 montserrat;
+    font-size: 32px;
     text-transform: uppercase;
     font-weight: bold;
     border: none;
     outline: none;
     color: #f4f4f4;
-    padding: 14px 16px;
+    padding: 24px 16px;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(133, 153, 255);
+.navbar a:hover, .dropbtn:hover {
     color:#000000;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
+    background-color: #b9b9b9;
+    color:#f4f4f4;
+    min-width: 195px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
 }
 
 .dropdown-content a {
     float: none;
-    color: black;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    text-align: left;
+    text-align: center;
 
 }
 
@@ -103,22 +176,9 @@ header #branding h1{
     display: block;
 }
 
-#showcase{
-    min-height: 400px;
-    background: url('../img/shipIso.png') no-repeat 0 -300px;
-    background-size: 100%;
-    padding-top: 140px;
-    color:#ffffff;
-}
-
-#showcase2{
-    min-height: 400px;
-    background: #8c97ac;
-    padding-top: 140px;
-}
-
-h1 .indexText{
-    color:#ffffff;
+h1{
+    color: white;
+    font-size:50px;
 }
 
 .BlenderProj {
@@ -129,88 +189,3 @@ h1 .indexText{
     font-size: 100px;
 }
 
-
-p{
-    color:#f4f4f4;
-    max-width: 500px;
-}
-
-#newsletter{
-    height:6px;
-    background: #37474f;
-}
-
-
-#boxes .box{
-    margin-top:50px;
-    float: left;
-    text-align:center;
-    width: 25%;
-    margin-right: 125px;
-
-}
-
-#boxes .box img{
-    float: left;
-    width: 440px;
-    padding-bottom: 20px;
-}
-
-#boxes .box h3{
-    margin-left:50px;   
-}
-
-#boxes .box p{
-    margin-left:50px;   
-}
-
-footer{
-    background: #37474f;
-    color: #ffffff;
-    padding-top:5px;
-    padding-left: 37%;
-    height: 50px;
-    margin-top: 620px;
-    text-align:center;
-}
-
-#click {
-    margin-top: 450px;
-    margin-left: 1500px;
-    width: 200px;
-    height:50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
-    position: absolute;
-}
-
-#Triangles{
-
-    position:absolute;
-}
-#Light{
-    fill:#76C5FF;
-}
-
-#Dark{
-    fill:#37ABFF;
-
-}
-
-#Dark1, #Dark2, #Light1{
-    transition: all 1s ease;
-
-}
-
-#Dark2{
-    transform: translateX(-100%);
-}
-
-svg:hover #Light1{
-    transform:translateX(20%);
-}
-
-svg:hover #Dark1{
-    transform:translateX(20%);
-    opacity: 0%;
-}

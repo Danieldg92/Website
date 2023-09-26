@@ -1,9 +1,10 @@
 body{
-    font: 15px/1.5 Arial, helvetica, sans-serif;
+    font: 15px/1.5 montserrat;
     padding:0;
     margin:0;
     background: #000000;
     color:rgb(0, 0, 0);
+    overflow: hidden;
 
 }
 
@@ -14,9 +15,27 @@ body{
     justify-content: center;
 }
 
+header{
+    background: #000000;
+    color:#f4f4f4;
+    position:relative;
+    padding-top: 30px;
+}
+
+header #branding{
+    
+    float:left;
+}
+
+header #branding h1{
+    margin: 0;
+    color:#f4f4f4;
+
+}
+
 .navbar {
-    overflow: hidden;
-    float: right;}
+    float: right;
+}
 
 .navbar a{
     float: left;
@@ -36,6 +55,7 @@ body{
 }
 
 .dropdown .dropbtn {
+    font: 15px/1.5 montserrat;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: bold;
@@ -44,12 +64,10 @@ body{
     color: #f4f4f4;
     padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(133, 153, 255);
+    background-color: rgb(255, 255, 255);
     color:#000000;
 }
 
@@ -57,7 +75,7 @@ body{
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    max-width: 112px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -84,29 +102,35 @@ body{
     display: block;
 }
 
-h1 .indexText{
-    color:#ffffff;
-}
-
-.BlenderProj {
-    color:#ffffff;
-    position:absolute;
-    margin-top:45px;
-    margin-left:520px;
-    font-size: 100px;
-}
-
 svg{
-    margin-top: 300px;
-    margin-left: 1200px;
+    position: absolute;
+    margin-top:-25px;
+}
+
+#arrowsRight{
+    margin-top: 330px;
+    margin-left: 1600px;
+
+}
+
+#arrowsLeft{
+    margin-top: 330px;
+    margin-left: 125px;
     position: absolute;
 
 }
 
 #Light{
-    
     fill:#000000;
     opacity: 100%;
+    
+}
+
+#lightLeft{
+    transition: all 0.5s ease;
+    fill:#000000;
+    opacity: 0%;
+    transform:translateX(100%);
 }
 
 #Dark{
@@ -114,11 +138,27 @@ svg{
     fill:#ffffff;
 }
 
-#Dark1{
-    opacity: 80%;
+#fullOpac{
+    opacity: 100%;
+    transition: 0.2s ease;
+    
 }
 
-#Dark1, #Dark2, #Light1{
+#fullOpacCrosshair{
+    opacity: 100%;
+    transition: 0.5s ease;
+}
+
+#LeftFullOpac{
+    opacity: 100%;
+}
+
+
+#RightFullOpac{
+    opacity: 100%;
+}
+
+#RightFullOpac, #RightLowOPac, #Light1, #LeftLowOpac, #LeftFullOpac{
     transition: all 0.5s ease;
 }
 
@@ -128,33 +168,98 @@ svg{
     opacity: 100%;
 }
 
-svg:hover #Dark1{
+svg:hover #LeftFullOpac{
     transform:translateX(6%);
     opacity:100%;
 }
 
-svg:hover #Dark2{
+svg:hover #LeftLowOpac{
     transform:translateX(-6%);
     opacity:0%;
 }
 
-#mouse{
-    margin-top: 550px;
-    margin-left:600px;
-}
-
-#ellips, #rightButton, #mouseBG{
-    opacity: 20%;
-}
-
-#mouseText{
+svg:hover #RightFullOpac{
+    transform:translateX(-6%);
     opacity:100%;
 }
 
-#leftButton{
-    opacity: 20%;
-    /*animation: blink 1s infinite;*/
+svg:hover #RightLowOPac{
+    transform:translateX(6%);
+    opacity:0%;
 }
+
+/* NOVA */
+
+#subdShip{
+    opacity:0%;
+    transform:translateX(-100%);
+    margin-left: 170px;
+    margin-top:100px;
+}
+
+#subdShipFadeIn{
+    transform:translateX(6%);
+    transition: 1s ease;
+    opacity:100%;
+    margin-left: 170px;
+    margin-top:100px;
+}
+
+#N, #O, #V, #A, #crossHair, #crossHair1, #crossHair2, #crossHair3, #crossHair4{
+    opacity:0%;
+    
+}
+
+#_{transform:translateX(-50%);
+    opacity:100%}
+
+#_2{transform:translateX(-35%);
+        opacity:50%}
+
+#_3{transform:translateX(-20%);
+            opacity:100%}
+
+#_4{transform:translateX(-5%);
+        opacity:50%}
+
+#underScoreBlinkIn{
+    animation: fadeIn 1s linear;
+}
+
+#underScoreBlinkOut{
+    animation: fadeOut 1s linear;
+}
+
+/*                  SUBD TEXT                           */
+
+#subdShip{
+    margin-left:170px;
+    margin-top:100px;
+}
+
+
+/*                  MOUSE ANIMATION                     */
+
+
+#mouse{
+    margin-top: 700px;
+    margin-left:750px;
+}
+
+#ellips, #rightButton, #mouseBG, #leftButton, #scroll{
+    opacity: 20%;
+    color:#E4E4E4;
+}
+
+#noOpacity{
+    transition: ease 1s;
+    opacity: 0%;
+}
+#Rotate{
+    opacity:0%;
+    animation: fadeIn 1s linear; }
+#Zoom{opacity:0%}
+#Move{opacity:0%}
 
 #fadeIn{
     animation: fadeIn 1s linear; 
