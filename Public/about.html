@@ -4,14 +4,31 @@
     <meta lang="EN"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel = "stylesheet" a href="..\CSS\style.css">
+    <link rel = "stylesheet" a href="..\CSS\about.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 </head>
 <body>
-    <header></header>
+    <header>
+        <div class="container">
+
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Services
+                </button>
+                <div class ="dropdown-content">
+                    <a href="Blender.html">Blender</a>
+                    <a href="CAD.html">CAD</a>
+                    <a href="UI.html">UI</a>
+
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="containerAbout">
-        <h2 class="About">About me</h2>
-        <h3>Work experience</h3>
+        <div id="about">
         <h4>2021-Present</h4>
         <p class="aboutP"><b>Mechanical engineer, Cobolt AB, a part of Húbner Photonics.</b>
             <br><br><b>Computer Aided Design</b> of parts and assemblies including
@@ -29,7 +46,12 @@
         Aiding expatriates who moved to Sweden for work. Finding a suitable apartment, setting up bank accounts,
         getting a Swedish personal number and inspect the apartment at move in to prevent legal liabilities. 
         </p>
+        </div>
+        <div id="mech">
+            <img src="/img/mechPic.png">
+        </div>
     </div>
+
 
     
 </body>
