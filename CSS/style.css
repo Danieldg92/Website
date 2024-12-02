@@ -2,7 +2,7 @@ body{
     font: 15px/1.5 montserrat;
     padding:0;
     margin:0;
-    background: #b9b9b9;
+    background: #000000;
     color:rgb(0, 0, 0);
 
 }
@@ -133,7 +133,7 @@ p{  font: 18px/1.5 montserrat;
 }
 
 .navbar a:hover, .dropbtn:hover {
-    color:#000000;
+    color:#b9b9b9;
 }
 
 .dropdown-content {
@@ -161,7 +161,7 @@ p{  font: 18px/1.5 montserrat;
 }
 
 .navbar a:hover{
-    color:#000000;
+    color:#b9b9b9;
     font-weight: bold;
 }
 

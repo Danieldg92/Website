@@ -99,6 +99,7 @@ document.getElementById("arrowsRight").onclick = function () {
     O.id="noOpacity";
     V.id="noOpacity";
     A.id="noOpacity";
+
     SubD();
     loadGLTF(Active);
 }
@@ -113,6 +114,7 @@ else if (Active == model3){
     Active=model1; 
     Nova();
     loadGLTF(Active);
+ 
 }
 }
 
@@ -260,6 +262,12 @@ const crossHair1=document.getElementById("crossHair1");
 const crossHair2=document.getElementById("crossHair2");
 const crossHair3=document.getElementById("crossHair3");
 const crossHair4=document.getElementById("crossHair4");  
+const InfoI=document.getElementById("i");
+const circle1=document.getElementById("circle1");
+const circle2=document.getElementById("circle2");
+InfoI.id="noOpacity";
+circle1.id="noOpacity";
+circle2.id="noOpacity";
 
 function Nova(){
     
@@ -295,9 +303,20 @@ function Nova(){
         _.id="noOpacity";
 
     },900);
-    /*blinking();*/
+    
+    //                  INFO BUBBLE                         \\
 
+    function Info(){
 
+    
+    
+    setTimeout(()=>{
+        InfoI.id="fullOpacCrosshair";
+        circle1.id="fullOpacCrosshair";
+        circle2.id="fullOpacCrosshair";
+    },2000);
+    }
+    Info();
 }
 Nova();
 

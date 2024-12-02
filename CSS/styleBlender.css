@@ -237,6 +237,15 @@ svg:hover #RightLowOPac{
     margin-top:100px;
 }
 
+/*                  INFO BTN                           */
+
+#Info1{
+    margin-left:1550px;
+    margin-top:140px;
+    opacity: 100%;
+}
+
+
 
 /*                  MOUSE ANIMATION                     */
 
